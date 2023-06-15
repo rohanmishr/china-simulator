@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>NBA simulator</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <div id="create-team" class="page">
+            <input id="coach-name" placeholder="Your name"></input> <br>
+            <select id="select-team">
+                <option>Atlanta Hawks</option>
+                <option>Boston Celtics</option>
+                <option>Brooklyn Nets</option>
+                <option>Charlotte Hornets</option>
+                <option>Chicago Bulls</option>
+                <option>Cleveland Cavaliers</option>
+                <option>Dallas Mavericks</option>
+                <option>Denver Nuggets</option>
+                <option>Detroit Pistons</option>
+                <option>Golden State Warriors</option>
+                <option>Houston Rockets</option>
+                <option>Indiana Pacers</option>
+                <option>Los Angeles Clippers</option>
+                <option>Los Angeles Lakers</option>
+                <option>Memphis Grizzlies</option>
+                <option>Miami Heat</option>
+                <option>Milwaukee Bucks</option>
+                <option>Minnesota Timberwolves</option>
+                <option>New Orleans Pelicans</option>
+                <option>New York Knicks</option>
+                <option>Oklahoma City Thunder</option>
+                <option>Orlando Magic</option>
+                <option>Philadelphia 76ers</option>
+                <option>Phoenix Suns</option>
+                <option>Portland Trail Blazers</option>
+                <option>Sacramento Kings</option>
+                <option>San Antonio Spurs</option>
+                <option>Toronto Raptors</option>
+                <option>Utah Jazz</option>
+                <option>Washington Wizards</option>
+            </select>
+
+            <label for="select-team">Select a team</label>
+
+            <button onclick="init()">Play!</button>
+        </div>
+
+
+
+        <div id="homepage" class="page">
+            <div id="homepage-header">
+                <h1 id="homepage-header-team">@team</h1>
+                <h2 id="homepage-header-record">@record</h2> <button id="standings-button" onclick="switchPage('standings')">Standings</button>
+            </div>
+            <hr>
+            <div id="homepage-roster">
+                <h2>Team roster</h2>
+                <div id="homepage-roster-inner">
+
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="standings" class="page">
+            <button onclick="switchPage('homepage')">Back</button><h1>Standings</h1>
+            <div id="standings-inner">
+                <div class="standings-conference">
+                    <h2>Eastern Conference</h2>
+                </div>
+                <div class="standings-conference">
+                    <h2>Western Conference</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- scripts -->
+    <script src="app/constants.js"></script>
+    <script src="app/script.js"></script>
+    <!-- classes -->
+    <script src="app/classes/Player.js"></script>
+    <script src="app/classes/Team.js"></script>
+    <script src="app/classes/Analytics.js"></script>
+</html>
